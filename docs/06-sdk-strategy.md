@@ -4,7 +4,7 @@
 
 - **TypeScript** — `npm install insightsbyomkar` · zero runtime deps · ~150 LOC at v1, generated from the OpenAPI spec going forward
 - **Python** — `pip install insightsbyomkar` · stdlib-only · ~190 LOC at v1, regenerated each release
-- **Go** — `go get github.com/omkarjaliparthi/tuffys-astrology-go/tuffys` (legacy module path) · `net/http` only · ~250 LOC
+- **Go** — `go get github.com/omkarjaliparthi/kriya-go` · `net/http` only · ~250 LOC
 
 All three MIT-licensed. All three publish automatically on GitHub release. v1 launch covered the 43-endpoint surface; current versions cover the **109+ endpoints** the API has grown to over nine semver versions. The TS and Python SDKs are now generated from the OpenAPI 3.1 spec on every release, so endpoint coverage tracks the server automatically.
 
@@ -61,8 +61,8 @@ client.transits(from_=from_dt, to=to_dt)
 
 ```go
 // Go
-client := tuffys.New(baseURL, tuffys.WithAPIKey(apiKey))
-chart, err := client.NatalChart(ctx, tuffys.Person{...})
+client := kriya.New(baseURL, kriya.WithAPIKey(apiKey))
+chart, err := client.NatalChart(ctx, kriya.Person{...})
 ```
 
 ## Error shape — consistent across all three
@@ -104,7 +104,7 @@ Every consumer gets the same five fields. A dating app running Go won't be surpr
 
 **Python** — `.github/workflows/publish-pypi.yml`, triggered on release. Uses **OIDC trusted publishing** — no PyPI token stored anywhere. GitHub signs an OIDC token, PyPI verifies it against the configured publisher, no secret rotation needed. This is the modern best practice; most teams are still shipping with tokens.
 
-**Go** — no registry. Tag a version (`git tag v0.1.0 && git push --tags`), consumers get it via `go get …@latest`. The separate `tuffys-astrology-go` repo isolates the version history from the main product, which is what Go modules want anyway.
+**Go** — no registry. Tag a version (`git tag v0.1.0 && git push --tags`), consumers get it via `go get …@latest`. The separate `kriya-go` repo isolates the version history from the main product, which is what Go modules want anyway.
 
 Each SDK has its own `LICENSE` file at the directory root — the proprietary-source server license doesn't travel with it when published. See [05 · Licensing split](./05-decision-licensing-split.md).
 

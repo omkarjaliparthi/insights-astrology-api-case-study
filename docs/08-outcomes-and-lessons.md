@@ -21,7 +21,7 @@
 - **Engine refits**: ELP/MPP02 lunar theory port (v9.1) brought the Moon to 0.87″ vs JPL Horizons; DOPRI8 8(7) integrator with 9-perturber force model now drives Pluto + asteroid trajectories (v9.0)
 - **9 semver versions** of disciplined iteration (v1 → v9.8.x) — 250+ commits, 1,900+ test assertions, accuracy disclosure published at `/v1/accuracy`
 - **Triple-fallback rate limiting**: Upstash Redis → Supabase RPC → in-process buckets
-- **Brand transition**: the product publicly trades as **Kriya** as of v9.7 — `kriya.insightsbyomkar.com`. The repo and Go module path retain the legacy `tuffys-` prefix for backward compatibility.
+- **Brand transition**: the product publicly trades as **Kriya** as of v9.7 — `kriya.insightsbyomkar.com`. The Go SDK was renamed from `tuffys-astrology-go` to `kriya-go` (module: `github.com/omkarjaliparthi/kriya-go`, package: `kriya`). The internal API repo retains its original name (`tuffys-ai-astrology`) for now — a non-public detail.
 - **TS + Python SDKs regenerated from the OpenAPI spec on every release** — endpoint coverage now tracks the server automatically, so the SDK-vs-server drift problem doesn't exist.
 
 The point of this section: the v1 sprint was the launch, not the product. The product is the cadence after.

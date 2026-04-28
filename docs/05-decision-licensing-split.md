@@ -43,7 +43,7 @@ tuffys-ai-astrology/
 └── ...everything else            # covered by root LICENSE
 ```
 
-The Go SDK lives in its own public GitHub repo (`tuffys-astrology-go`) with its own MIT `LICENSE`. This is a Go-idiom choice more than a licensing one — Go packages are discovered by repo URL, not registry name.
+The Go SDK lives in its own public GitHub repo (`kriya-go`) with its own MIT `LICENSE`. This is a Go-idiom choice more than a licensing one — Go packages are discovered by repo URL, not registry name.
 
 ## What the NOTICE file does
 
