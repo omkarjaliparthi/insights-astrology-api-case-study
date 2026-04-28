@@ -15,6 +15,17 @@
 - README positioned as a technical product brief
 - Brand rebuild under the "Insights by Omkar" umbrella
 
+## Where it is now &nbsp; <sub><i>(as of 2026-04-27 — 6 weeks after launch)</i></sub>
+
+- **109+ v1 endpoints** across 10+ domains — Western, Vedic, Jaimini, KP, Hellenistic, electional, points & geometry, bodies, LLM-grounded readings, developer/admin
+- **Engine refits**: ELP/MPP02 lunar theory port (v9.1) brought the Moon to 0.87″ vs JPL Horizons; DOPRI8 8(7) integrator with 9-perturber force model now drives Pluto + asteroid trajectories (v9.0)
+- **9 semver versions** of disciplined iteration (v1 → v9.8.x) — 250+ commits, 1,900+ test assertions, accuracy disclosure published at `/v1/accuracy`
+- **Triple-fallback rate limiting**: Upstash Redis → Supabase RPC → in-process buckets
+- **Brand transition**: the product publicly trades as **Kriya** as of v9.7 — `kriya.insightsbyomkar.com`. The repo and Go module path retain the legacy `tuffys-` prefix for backward compatibility.
+- **TS + Python SDKs regenerated from the OpenAPI spec on every release** — endpoint coverage now tracks the server automatically, so the SDK-vs-server drift problem doesn't exist.
+
+The point of this section: the v1 sprint was the launch, not the product. The product is the cadence after.
+
 ## What this proves
 
 Not "one person can ship in a day" — that would be misleading. The actual lesson:
@@ -94,4 +105,4 @@ Very few Senior PM / TPM / Founding PM candidates have both artifacts. That's th
 
 **Back to:** [case study index](../README.md)
 
-**Also:** [PRD · public launch](https://github.com/omkarjaliparthi/tpm-portfolio/blob/main/prds/astrology-api-launch.md) · [RFC · engine build vs buy](https://github.com/omkarjaliparthi/tpm-portfolio/blob/main/rfcs/home-grown-ephemeris-engine.md) · [Parent SaaS case study](https://github.com/omkarjaliparthi/insights-by-omkar-case-study) · [Live API](https://tuffys-ai-astrology.vercel.app)
+**Also:** [PRD · public launch](https://github.com/omkarjaliparthi/tpm-portfolio/blob/main/prds/astrology-api-launch.md) · [RFC · engine build vs buy](https://github.com/omkarjaliparthi/tpm-portfolio/blob/main/rfcs/home-grown-ephemeris-engine.md) · [Parent SaaS case study](https://github.com/omkarjaliparthi/insights-by-omkar-case-study) · [Live API · Kriya](https://kriya.insightsbyomkar.com)

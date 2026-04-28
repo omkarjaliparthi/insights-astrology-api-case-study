@@ -1,12 +1,12 @@
 # 06 · SDK Strategy
 
-## Three SDKs, shipped with v1
+## Three SDKs, shipped with v1, grown with the engine
 
-- **TypeScript** — `npm install tuffys-astrology` · zero runtime deps · ~150 LOC
-- **Python** — `pip install tuffys-astrology` · stdlib-only · ~190 LOC
-- **Go** — `go get github.com/omkarjaliparthi/tuffys-astrology-go/tuffys` · `net/http` only · ~250 LOC
+- **TypeScript** — `npm install insightsbyomkar` · zero runtime deps · ~150 LOC at v1, generated from the OpenAPI spec going forward
+- **Python** — `pip install insightsbyomkar` · stdlib-only · ~190 LOC at v1, regenerated each release
+- **Go** — `go get github.com/omkarjaliparthi/tuffys-astrology-go/tuffys` (legacy module path) · `net/http` only · ~250 LOC
 
-All three MIT-licensed. All three publish automatically on GitHub release. All three cover every one of the 43 v1 endpoints.
+All three MIT-licensed. All three publish automatically on GitHub release. v1 launch covered the 43-endpoint surface; current versions cover the **109+ endpoints** the API has grown to over nine semver versions. The TS and Python SDKs are now generated from the OpenAPI 3.1 spec on every release, so endpoint coverage tracks the server automatically.
 
 ## Why three
 
@@ -44,16 +44,17 @@ Every method maps 1:1 to an endpoint. No cleverness, no aggregations, no "helpfu
 
 ```ts
 // TypeScript
-const client = new TuffysAstrology({ baseURL, apiKey });
+const client = new InsightsByOmkarClient({ baseURL, apiKey });
 await client.natalChart({ datetime: "1990-06-15T12:00:00Z", latitude: 51.5, longitude: 0 });
 await client.transits({ from, to });
 await client.synastry({ personA, personB });
-// ... 40 more methods, one per endpoint
+// ... 100+ more methods, one per endpoint
 ```
 
 ```py
 # Python
-client = TuffysAstrology(base_url, api_key=api_key)
+from insightsbyomkar import InsightsByOmkarClient
+client = InsightsByOmkarClient(base_url, api_key=api_key)
 client.natal_chart(datetime="1990-06-15T12:00:00Z", latitude=51.5, longitude=0)
 client.transits(from_=from_dt, to=to_dt)
 ```
@@ -68,7 +69,7 @@ chart, err := client.NatalChart(ctx, tuffys.Person{...})
 
 ```ts
 // TS
-class TuffysAPIError extends Error {
+class InsightsByOmkarError extends Error {
   status: number;
   code: string;
   message: string;
@@ -78,7 +79,7 @@ class TuffysAPIError extends Error {
 
 ```py
 # Python
-class TuffysAPIError(Exception):
+class InsightsByOmkarError(Exception):
     status: int
     code: str
     message: str

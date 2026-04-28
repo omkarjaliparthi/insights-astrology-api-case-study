@@ -99,7 +99,7 @@ The paid `/api/v1/*` surface keeps the JWT + quota stack unchanged.
 - Adds a deploy target and a config language
 - Ties our surface to theirs; harder to move later
 - Cost scales with request volume
-- For 43 endpoints and one backend, the abstraction cost exceeds the benefit
+- For the v1-launch surface of 43 endpoints (now 109+) on one backend, the abstraction cost exceeds the benefit
 
 ### Auth0 or Supabase Auth
 

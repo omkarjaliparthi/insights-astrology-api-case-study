@@ -15,7 +15,7 @@ flowchart TB
     subgraph Edge [Edge · Vercel]
         Next[Next.js App Router]
         RSC[Server Components<br>marketing · pricing · docs]
-        API[API routes<br>/api/v1/* · 43 endpoints]
+        API[API routes<br>/api/v1/* · 109+ endpoints]
         Guard[Demo guard<br>origin + IP rate]
     end
 
@@ -75,7 +75,7 @@ tuffys-ai-astrology/
 │   ├── docs/                     # static endpoint reference
 │   │   └── api/                  # interactive Scalar explorer
 │   ├── dashboard/                # live demo workspace
-│   └── api/v1/                   # ← 43 v1 handlers
+│   └── api/v1/                   # ← 109+ v1 handlers (43 at v1 launch)
 │       ├── chart/
 │       ├── vedic/
 │       ├── transits/ ...
@@ -171,7 +171,7 @@ This is a deliberate inversion of the usual backend design: instead of "start fr
 | `/docs` | Static endpoint reference | SEO-crawlable API docs |
 | `/docs/api` | Scalar interactive explorer | Try-before-buy |
 | `/dashboard` | Live natal-chart demo | Zero-friction first win |
-| `/api/v1/*` | The 43 endpoints | The product |
+| `/api/v1/*` |  The 109+ endpoints | The product |
 | `/api/v1/openapi.json` | OpenAPI 3.1 spec | Tooling + SDK generation + docs |
 | `/api/birth-chart` | Demo-tier chart | Free browser access (guarded) |
 
