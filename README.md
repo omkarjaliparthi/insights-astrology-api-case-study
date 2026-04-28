@@ -33,7 +33,7 @@ The lesson isn't "you can ship a 43-endpoint API in a day." It's that **pre-exec
 | **Accuracy** | ~1″ Mercury–Neptune · 0.87″ Moon · 36″ Sun · documented analytical-theory ceiling at `/v1/accuracy` |
 | **Auth** | Stateless HS256 JWT · per-key quotas encoded in payload · denylist revocation |
 | **Rate limiting** | Triple-fallback: Upstash Redis → Supabase RPC → in-process buckets |
-| **SDKs** | TypeScript: `npm install insightsbyomkar` · Python: `pip install insightsbyomkar` · Go: `go get github.com/omkarjaliparthi/kriya-go` · all MIT · zero runtime deps |
+| **SDKs** | TypeScript: `npm install kriya-astrology` · Python: `pip install kriya-astrology` · Go: `go get github.com/omkarjaliparthi/kriya-go` · all MIT · zero runtime deps |
 | **Frontend** | Next.js App Router · live demo · `/pricing` · `/docs/api` with Scalar explorer |
 | **Tests** | 230+ golden-file assertions validated against Meeus published tables; 1,900+ total test assertions |
 | **CI/CD** | GitHub Actions · typecheck + lint + test + build on every PR · OIDC PyPI publishing |
@@ -67,7 +67,7 @@ The lesson isn't "you can ship a 43-endpoint API in a day." It's that **pre-exec
 - **[RFC · home-grown ephemeris engine (build vs buy)](https://github.com/omkarjaliparthi/tpm-portfolio/blob/main/rfcs/home-grown-ephemeris-engine.md)** — four-option weighted scoring · four-phase implementation plan
 - **[Parent SaaS case study](https://github.com/omkarjaliparthi/insights-by-omkar-case-study)** — the consumer product from which this API was conceptually extracted
 - **[Live API](https://kriya.insightsbyomkar.com)** · [Interactive docs](https://kriya.insightsbyomkar.com/docs/api) · [Pricing](https://kriya.insightsbyomkar.com/pricing)
-- **[Go SDK](https://github.com/omkarjaliparthi/kriya-go)** · [TypeScript SDK (npm)](https://www.npmjs.com/package/insightsbyomkar) · [Python SDK (PyPI)](https://pypi.org/project/insightsbyomkar/)
+- **[Go SDK](https://github.com/omkarjaliparthi/kriya-go)** · [TypeScript SDK (npm)](https://www.npmjs.com/package/kriya-astrology) · [Python SDK (PyPI)](https://pypi.org/project/kriya-astrology/)
 
 ---
 

@@ -2,8 +2,8 @@
 
 ## Three SDKs, shipped with v1, grown with the engine
 
-- **TypeScript** — `npm install insightsbyomkar` · zero runtime deps · ~150 LOC at v1, generated from the OpenAPI spec going forward
-- **Python** — `pip install insightsbyomkar` · stdlib-only · ~190 LOC at v1, regenerated each release
+- **TypeScript** — `npm install kriya-astrology` · zero runtime deps · ~150 LOC at v1, generated from the OpenAPI spec going forward
+- **Python** — `pip install kriya-astrology` · stdlib-only · ~190 LOC at v1, regenerated each release
 - **Go** — `go get github.com/omkarjaliparthi/kriya-go` · `net/http` only · ~250 LOC
 
 All three MIT-licensed. All three publish automatically on GitHub release. v1 launch covered the 43-endpoint surface; current versions cover the **109+ endpoints** the API has grown to over nine semver versions. The TS and Python SDKs are now generated from the OpenAPI 3.1 spec on every release, so endpoint coverage tracks the server automatically.
@@ -44,7 +44,7 @@ Every method maps 1:1 to an endpoint. No cleverness, no aggregations, no "helpfu
 
 ```ts
 // TypeScript
-const client = new InsightsByOmkarClient({ baseURL, apiKey });
+const client = new KriyaAstrologyClient({ baseURL, apiKey });
 await client.natalChart({ datetime: "1990-06-15T12:00:00Z", latitude: 51.5, longitude: 0 });
 await client.transits({ from, to });
 await client.synastry({ personA, personB });
@@ -53,8 +53,8 @@ await client.synastry({ personA, personB });
 
 ```py
 # Python
-from insightsbyomkar import InsightsByOmkarClient
-client = InsightsByOmkarClient(base_url, api_key=api_key)
+from kriya_astrology import KriyaAstrologyClient
+client = KriyaAstrologyClient(base_url, api_key=api_key)
 client.natal_chart(datetime="1990-06-15T12:00:00Z", latitude=51.5, longitude=0)
 client.transits(from_=from_dt, to=to_dt)
 ```
@@ -69,7 +69,7 @@ chart, err := client.NatalChart(ctx, kriya.Person{...})
 
 ```ts
 // TS
-class InsightsByOmkarError extends Error {
+class KriyaAstrologyError extends Error {
   status: number;
   code: string;
   message: string;
@@ -79,7 +79,7 @@ class InsightsByOmkarError extends Error {
 
 ```py
 # Python
-class InsightsByOmkarError(Exception):
+class KriyaAstrologyError(Exception):
     status: int
     code: str
     message: str
