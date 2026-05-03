@@ -127,5 +127,5 @@ The lesson isn't "you can ship a 43-endpoint API in a day." It's that **pre-exec
 
 <p align="center">
 <b>Hiring Senior PM · TPM · Founding PM?</b><br/>
-<a href="mailto:Jaliparthiomkar03@gmail.com">Jaliparthiomkar03@gmail.com</a> · <a href="https://www.linkedin.com/in/jaliparthiomkar">LinkedIn</a> · <a href="https://github.com/omkarjaliparthi">GitHub</a>
+<a href="mailto:admin@insightsbyomkar.com">admin@insightsbyomkar.com</a> · <a href="https://www.linkedin.com/in/jaliparthiomkar">LinkedIn</a> · <a href="https://github.com/omkarjaliparthi">GitHub</a>
 </p>
